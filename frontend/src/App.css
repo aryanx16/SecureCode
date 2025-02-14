@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* .left .code,
+.code pre,
+.code pre code {
+    width: 100%;
+    margin: 0;
+    background-color: black;
+} */
+
+pre[class*="language-"], code[class*="language-"] {
+    background: #0f172b !important; /* slate-950 */
+}
