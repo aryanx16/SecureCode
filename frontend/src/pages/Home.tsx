@@ -49,7 +49,8 @@ const Home = () => {
         <div className="bg-gray-950 h-screen w-screen flex flex-col">
             {/* Navbar */}
             <div className="font-mono  flex justify-between items-center font-bold text-3xl sm:text-4xl text-sky-500 px-4 pt-2">
-                <div>
+                <div className='flex gap-1 justify-center items-center'>
+                    <img width={42} src="https://cdn3d.iconscout.com/3d/premium/thumb/dark-web-3d-icon-download-in-png-blend-fbx-gltf-file-formats--website-tor-browser-network-deep-pack-crime-security-icons-7412312.png?f=webp" alt="" />
                 SecureCode
                 </div>
                 <div className=''>
