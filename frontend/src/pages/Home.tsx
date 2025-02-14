@@ -29,7 +29,6 @@ const Home = () => {
     
                 console.log(data);
                 setreviewedcode(data);
-                 // Clear input after successful review
     
                 return "Got the data!"; // Required for toast.success
             } catch (e) {
@@ -77,7 +76,7 @@ const Home = () => {
                 </div>
                 <div className="right w-full border border-sky-500 rounded-md h-full overflow-y-auto">
                     <div className='text-md text-sky-100 p-3 font-sans  '>
-                        <div className='text-2xl text-sky-500 font-mono font-bold'>
+                        <div className='text-2xl text-sky-500 font-mono font-bold pt-2'>
                         Reviewed Code
 
                         </div>
