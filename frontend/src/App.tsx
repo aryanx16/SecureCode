@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
           <Toaster/>
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/about' element={<Landing/>} />
+          <Route path='/home' element={<Home/>} />
+          <Route path='/' element={<Landing/>} />
         </Routes>
       </BrowserRouter>
     </>
