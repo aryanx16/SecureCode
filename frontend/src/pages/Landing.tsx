@@ -4,7 +4,7 @@ import { Bot, Code, Shield, Zap, CheckCircle, ArrowRight, Github, Star,  Play, C
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
-    const [isVisible, setIsVisible] = useState(false)
+    const [, setIsVisible] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     
     useEffect(() => {
