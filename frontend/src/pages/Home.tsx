@@ -11,8 +11,11 @@ import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import { Bot, Code } from 'lucide-react'
 import {motion} from "framer-motion"
+import {DropdownMenuDemo}from '@/components/Dropdown'
+// import Dropdown from '@/components/Dropdown'
 
 const Home = () => {
+      const [selectedModel, setSelectedModel] = useState("GPT-4")
     const [code, setcode] = useState(`function sum(){
         return 1+1
         }`)
@@ -92,11 +95,13 @@ const Home = () => {
                         />
                     </div>
                     <div className='w-full flex justify-end pt-2'>
+                        {/* <button>choose model</button> */}
+                        <DropdownMenuDemo setSelectedModel={setSelectedModel} selectedModel={selectedModel}/>
                         <motion.button
                          whileHover={{ scale: 1.02,  }}
                          whileTap={{ scale: 0.98 }}
                          
-                        onClick={reviewcode} className='px-3 py-1 border rounded-md transition-all ease-initial duration-300 bg-sky-500 cursor-pointer text-slate-950 hover:text-sky-500 hover:bg-gray-950 font-bold'>Review</motion.button>
+                        onClick={reviewcode} className='mx-3 px-3 py-1 border rounded-md transition-all ease-initial duration-300 bg-sky-500 cursor-pointer text-slate-950 hover:text-sky-500 hover:bg-gray-950 font-bold'>Review</motion.button>
                     </div>
                 </motion.div>
                 <motion.div
