@@ -129,3 +129,26 @@ pre[class*="language-"], code[class*="language-"] {
     @apply bg-background text-foreground;
     }
 }
+/* In a global CSS file, like index.css or App.css */
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+/* Other markdown elements */
+p {
+  line-height: 1.6;
+}
+
+/* code {
+  background-color: #3d5a78;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+} */

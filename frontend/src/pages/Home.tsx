@@ -15,9 +15,12 @@ import {DropdownMenuDemo}from '@/components/Dropdown'
 // import Dropdown from '@/components/Dropdown'
 
 const Home = () => {
-      const [selectedModel, setSelectedModel] = useState("GPT-4")
-    const [code, setcode] = useState(`function sum(){
-        return 1+1
+      const [selectedModel, setSelectedModel] = useState(()=>{
+        const model = localStorage.getItem('model') || 'gemini-2.0-flash'
+        return model;
+      })
+    const [code, setcode] = useState(`function Greet(){
+        cout<<"Hello world"<<endl;
         }`)
     const [reviewedcode, setreviewedcode] = useState(``)
     useEffect(() => {
@@ -27,7 +30,8 @@ const Home = () => {
     const reviewcode = async () => {
         const response = async () => {
             try {
-                const { data }: { data: string } = await axios.post(`${BACKEND_URL}/ai/response`, { code });
+                console.log(selectedModel);
+                const { data }: { data: string } = await axios.post(`${BACKEND_URL}/ai/response`, { code,selectedModel });
     
                 if (!data.trim()) {
                     throw new Error("Empty response received");
@@ -35,7 +39,7 @@ const Home = () => {
     
                 console.log(data);
                 setreviewedcode(data);
-    
+                
                 return "Got the data!"; // Required for toast.success
             } catch (e) {
                 console.error("Error:", e);
@@ -52,9 +56,9 @@ const Home = () => {
 
     }
     return (
-        <div className="bg-gray-950 h-screen w-screen flex flex-col">
+        <div className="bg-gray-950 h-screen w-screen z-10 flex flex-col">
             {/* Navbar */}
-            <div className="font-mono  flex justify-between items-center font-bold text-3xl sm:text-4xl text-sky-500 px-4 pt-2">
+            <div className="font-mono  flex justify-between items-center font-bold text-3xl sm:text-4xl text-sky-500 px-4 pt-2 z-10">
                 <div className='flex gap-1 justify-center items-center'>
                    <div className="relative">
                                 <img width={40} height={40} src="https://cdn3d.iconscout.com/3d/premium/thumb/dark-web-3d-icon-download-in-png-blend-fbx-gltf-file-formats--website-tor-browser-network-deep-pack-crime-security-icons-7412312.png?f=webp" alt="SecureCode" className="drop-shadow-lg" />
@@ -122,6 +126,10 @@ const Home = () => {
 
                             >{reviewedcode || "Your code review will appear here"}
                             </Markdown>
+                            {/* <ReactMarkdown  rehypePlugins={[rehypeHighlight]}>
+                                {reviewedcode}
+                            </ReactMarkdown> */}
+                            
                         </div>
                     </div>
 
