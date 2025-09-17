@@ -92,7 +92,7 @@ const LandingPage = () => {
                                 <img width={40} height={40} src="https://cdn3d.iconscout.com/3d/premium/thumb/dark-web-3d-icon-download-in-png-blend-fbx-gltf-file-formats--website-tor-browser-network-deep-pack-crime-security-icons-7412312.png?f=webp" alt="SecureCode" className="drop-shadow-lg" />
                                 <div className="absolute inset-0 bg-sky-400/20 rounded-lg blur-md"></div>
                             </div>
-                            <span className="bg-gradient-to-r from-sky-400 to-blue-300 bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r  from-sky-400 to-blue-300 bg-clip-text text-transparent">
                                 SecureCode
                             </span>
                         </motion.div>
@@ -184,7 +184,7 @@ const LandingPage = () => {
                                 initial={{ opacity: 0, x: -100 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: 0.4 }}
-                                className="block bg-gradient-to-r from-sky-400 via-blue-300 to-sky-400 bg-clip-text text-transparent"
+                                className="block bg-gradient-to-r from-sky-400 via-blue-300 to-sky-400 text-8xl bg-clip-text text-transparent"
                             >
                                 Secure
                             </motion.span>
@@ -192,7 +192,7 @@ const LandingPage = () => {
                                 initial={{ opacity: 0, x: 100 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: 0.6 }}
-                                className="block bg-gradient-to-r from-blue-300 via-sky-400 to-blue-300 bg-clip-text text-transparent"
+                                className="block text-8xl bg-gradient-to-r from-blue-300 via-sky-400 to-blue-300 bg-clip-text text-transparent"
                             >
                                 Code
                             </motion.span>
